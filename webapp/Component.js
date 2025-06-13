@@ -6,12 +6,7 @@ sap.ui.define([
     "use strict";
     return UIComponent.extend("sapui5.walkthrough.Component", {
         metadata: {
-            rootView: {
-                "viewName": "sapui5.walkthrough.view.App",
-                "type": "XML",
-                "async": true,
-                "id": "app"
-            }
+            manifest: "json"
         },
         init: function() {
             // call the init function of the parent
@@ -25,14 +20,7 @@ sap.ui.define([
             var oModel = new JSONModel(oData);
             this.setModel(oModel);
 
-            //set i18n model
-
-            var i18nModel = new ResourceModel({
-                bundleName: "sapui5.walkthrough.i18n.i18n",
-                supportedLocales: [""],
-                fallbackLocale: ""
-            });
-            this.setModel(i18nModel, "i18n")
+            
     
         }
     });
